@@ -1,6 +1,6 @@
 {
   "downloadFormat": "csv",
-  "generatorFile": "mygenerator.zip",
+  "generatorFile": "generator.zip",
   "syntheticDataFile": "players_seasons_synthetic.zip",
   "syntheticDatasetConfig": {
     "name": "players and seasons small",
