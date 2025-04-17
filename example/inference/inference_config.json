@@ -1,7 +1,5 @@
 {
-  "downloadFormat": "csv",
   "generatorFile": "generator.zip",
-  "syntheticDataFile": "players_and_seasons_synthetic.zip",
   "syntheticDatasetConfig": {
     "name": "Baseball Players and Seasons",
     "description": null,

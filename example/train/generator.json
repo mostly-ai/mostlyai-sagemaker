@@ -1,10 +1,10 @@
 {
-  "name": "players and seasons",
+  "name": "Baseball Players and Seasons",
   "description": null,
   "tables": [
      {
-        "name": "playerssmall",
-        "location": "playerssmall/playerssmall.csv",
+        "name": "players",
+        "location": "players/players.csv",
         "tabularModelConfiguration": {
            "model": "MOSTLY_AI/Medium",
            "maxSampleSize": 1900,
@@ -67,8 +67,8 @@
         ]
      },
      {
-        "name": "seasons_forplayerssmall",
-        "location": "seasons_forplayerssmall/seasons_forplayerssmall.csv",
+        "name": "seasons",
+        "location": "seasons/seasons.csv",
         "tabularModelConfiguration": {
            "model": "MOSTLY_AI/Medium",
            "maxSampleSize": 1900,
@@ -89,7 +89,7 @@
         "foreignKeys": [
            {
               "column": "players_id",
-              "referencedTable": "playerssmall",
+              "referencedTable": "players",
               "isContext": true
            }
         ],
