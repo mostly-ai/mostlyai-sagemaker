@@ -1,13 +1,13 @@
 {
   "downloadFormat": "csv",
   "generatorFile": "generator.zip",
-  "syntheticDataFile": "players_seasons_synthetic.zip",
+  "syntheticDataFile": "players_and_seasons_synthetic.zip",
   "syntheticDatasetConfig": {
-    "name": "players and seasons small",
+    "name": "Baseball Players and Seasons",
     "description": null,
     "tables": [
       {
-        "name": "playerssmall",
+        "name": "players",
         "configuration": {
           "sampleSize": 10,
           "sampleSeedConnectorId": null,
@@ -22,7 +22,7 @@
         }
       },
       {
-        "name": "seasons_forplayerssmall",
+        "name": "seasons",
         "configuration": {
           "sampleSize": null,
           "sampleSeedConnectorId": null,
