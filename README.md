@@ -1,9 +1,9 @@
 # mostlyai-sagemaker
 
-# About this repository
+## About this repository
 This repo collects all the code and examples to use the MOSTLY AI SDK in AWS Sagemaker. 
 
-# About MOSTLY AI SDK
+## About MOSTLY AI SDK
 The MOSTLY AI SDK is an open source library, which generates synthetic data that is highly representative, highly realistic, and considered 'as good as real'. While maintaining high accuracy and protecting the privacy of your subjects, you can openly process and share the generated synthetic data with others. 
 
 Benefits
@@ -21,6 +21,6 @@ Benefits
 * *Data Augmentation*: Amplify your datasets with synthetic data to increase sample sizes, improve model performance, and explore "what-if" scenarios. 
 * *Data Diversity*: Foster diversity in your datasets by generating synthetic data that captures a wide range of characteristics. Ensure comprehensive and unbiased analysis.
 
-# How to use the examples
+## How to use the examples
 
-Please use the Jupyter Notebook ``mostlyai-sdk-sagemaker-example.ipynb`` to run through the example. 
+Please use the Jupyter Notebook `mostlyai-sdk-sagemaker-example.ipynb` to run through the example. 
