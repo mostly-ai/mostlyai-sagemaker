@@ -21,6 +21,6 @@ The MOSTLY AI SDK is an open source library, which generates synthetic data that
 * *Data Augmentation*: Amplify your datasets with synthetic data to increase sample sizes, improve model performance, and explore "what-if" scenarios. 
 * *Data Diversity*: Foster diversity in your datasets by generating synthetic data that captures a wide range of characteristics. Ensure comprehensive and unbiased analysis.
 
-## How to use the examples
+## How to use the example
 
-Please use the Jupyter Notebook `mostlyai-sdk-sagemaker-example.ipynb` to run through the example. 
+Copy the example folder to your notebook folder. Use the notebook `mostlyai-sdk-sagemaker-example.ipynb` to run through the example. 
