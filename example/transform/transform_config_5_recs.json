@@ -1,39 +1,43 @@
 {
-  "generatorFile": "generator.zip",
-  "syntheticDatasetConfig": {
-    "name": "Baseball Players and Seasons",
-    "description": null,
-    "tables": [
-      {
-        "name": "players",
-        "configuration": {
-          "sampleSize": 5,
-          "sampleSeedConnectorId": null,
-          "sampleSeedDict": null,
-          "sampleSeedData": null,
-          "samplingTemperature": 1.0,
-          "samplingTopP": 1.0,
-          "rebalancing": null,
-          "imputation": null,
-          "fairness": null,
-          "enableDataReport": true
-        }
-      },
-      {
-        "name": "seasons",
-        "configuration": {
-          "sampleSize": null,
-          "sampleSeedConnectorId": null,
-          "sampleSeedDict": null,
-          "sampleSeedData": null,
-          "samplingTemperature": 1,
-          "samplingTopP": 1,
-          "rebalancing": null,
-          "imputation": null,
-          "fairness": null,
-          "enableDataReport": true
-        }
-      }
-    ]
+  "generate": {
+     "syntheticDataFile": "synthetic_players_and_seasons.zip",
+     "generatorFile": "generator_players_and_seasons.zip",
+     "downloadFormat": "csv",
+     "config": {
+        "name": "players and seasons small",
+        "description": null,
+        "tables": [
+           {
+              "name": "players",
+              "configuration": {
+              "sampleSize": 5,
+              "sampleSeedConnectorId": null,
+              "sampleSeedDict": null,
+              "sampleSeedData": null,
+              "samplingTemperature": 1.0,
+              "samplingTopP": 1.0,
+              "rebalancing": null,
+              "imputation": null,
+              "fairness": null,
+              "enableDataReport": true
+              }
+           },
+           {
+              "name": "seasons",
+              "configuration": {
+              "sampleSize": null,
+              "sampleSeedConnectorId": null,
+              "sampleSeedDict": null,
+              "sampleSeedData": null,
+              "samplingTemperature": 1,
+              "samplingTopP": 1,
+              "rebalancing": null,
+              "imputation": null,
+              "fairness": null,
+              "enableDataReport": true
+              }
+           }
+        ]
+     }
   }
 }

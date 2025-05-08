@@ -1,0 +1,201 @@
+{
+   "train": {
+      "generatorFile": "generator_players_and_seasons.zip",
+      "config": {
+         "name": "players and seasons",
+         "description": null,
+         "tables": [
+            {
+               "name": "players",
+               "location": "train/players/players.csv",
+               "tabularModelConfiguration": {
+                  "model": "MOSTLY_AI/Medium",
+                  "maxSampleSize": 1900,
+                  "batchSize": null,
+                  "gradientAccumulationSteps": null,
+                  "maxTrainingTime": 10,
+                  "maxEpochs": 100,
+                  "maxSequenceWindow": 100,
+                  "enableFlexibleGeneration": true,
+                  "valueProtection": true,
+                  "rareCategoryReplacementMethod": "CONSTANT",
+                  "differentialPrivacy": null,
+                  "compute": "c5f0d5da-04d9-4099-8394-e1048a469a5a",
+                  "enableModelReport": true
+               },
+               "languageModelConfiguration": null,
+               "primaryKey": "id",
+               "foreignKeys": null,
+               "columns": [
+                  {
+                     "name": "id",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  },
+                  {
+                     "name": "country",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  },
+                  {
+                     "name": "birthDate",
+                     "modelEncodingType": "TABULAR_DATETIME"
+                  },
+                  {
+                     "name": "deathDate",
+                     "modelEncodingType": "TABULAR_DATETIME"
+                  },
+                  {
+                     "name": "nameFirst",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  },
+                  {
+                     "name": "nameLast",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  },
+                  {
+                     "name": "weight",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "height",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "bats",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  },
+                  {
+                     "name": "throws",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  }
+               ]
+            },
+            {
+               "name": "seasons",
+               "location": "train/seasons/seasons.csv",
+               "tabularModelConfiguration": {
+                  "model": "MOSTLY_AI/Medium",
+                  "maxSampleSize": 1900,
+                  "batchSize": null,
+                  "gradientAccumulationSteps": null,
+                  "maxTrainingTime": 2,
+                  "maxEpochs": 100,
+                  "maxSequenceWindow": 100,
+                  "enableFlexibleGeneration": true,
+                  "valueProtection": true,
+                  "rareCategoryReplacementMethod": "CONSTANT",
+                  "differentialPrivacy": null,
+                  "compute": "c5f0d5da-04d9-4099-8394-e1048a469a5a",
+                  "enableModelReport": true
+               },
+               "languageModelConfiguration": null,
+               "primaryKey": null,
+               "foreignKeys": [
+                  {
+                     "column": "players_id",
+                     "referencedTable": "players",
+                     "isContext": true
+                  }
+               ],
+               "columns": [
+                  {
+                     "name": "players_id",
+                     "modelEncodingType": "LANGUAGE_TEXT"
+                  },
+                  {
+                     "name": "year",
+                     "modelEncodingType": "TABULAR_NUMERIC_BINNED"
+                  },
+                  {
+                     "name": "team",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  },
+                  {
+                     "name": "league",
+                     "modelEncodingType": "TABULAR_CATEGORICAL"
+                  },
+                  {
+                     "name": "G",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "AB",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "R",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "H",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "HR",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "RBI",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "SB",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "CS",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "BB",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  },
+                  {
+                     "name": "SO",
+                     "modelEncodingType": "TABULAR_NUMERIC_DIGIT"
+                  }
+               ]
+            }
+         ]
+      }
+   },
+   "generate": {
+      "syntheticDataFile": "synthetic_players_and_seasons.zip",
+      "downloadFormat": "csv",
+      "config": {
+         "name": "players and seasons small",
+         "description": null,
+         "tables": [
+            {
+               "name": "players",
+               "configuration": {
+               "sampleSize": 10,
+               "sampleSeedConnectorId": null,
+               "sampleSeedDict": null,
+               "sampleSeedData": null,
+               "samplingTemperature": 1.0,
+               "samplingTopP": 1.0,
+               "rebalancing": null,
+               "imputation": null,
+               "fairness": null,
+               "enableDataReport": true
+               }
+            },
+            {
+               "name": "seasons",
+               "configuration": {
+               "sampleSize": null,
+               "sampleSeedConnectorId": null,
+               "sampleSeedDict": null,
+               "sampleSeedData": null,
+               "samplingTemperature": 1,
+               "samplingTopP": 1,
+               "rebalancing": null,
+               "imputation": null,
+               "fairness": null,
+               "enableDataReport": true
+               }
+            }
+         ]
+      }
+   }
+}
